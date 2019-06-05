@@ -1,7 +1,3 @@
-<!--
-# -*- mode: jinja -*-
--->
-
 About databroker
 ================
 
@@ -18,8 +14,17 @@ A unified interface to the various data sources at NSLS-II.
 Current build status
 ====================
 
-All platforms:
-[![noarch](https://img.shields.io/circleci/project/github/conda-forge/databroker-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/databroker-feedstock)
+
+<table><tr>
+    
+    <td>All platforms:</td>
+    <td>
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5550&branchName=master">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/databroker-feedstock?branchName=master">
+      </a>
+    </td>
+  </tr>
+</table>
 
 Current release info
 ====================
@@ -114,4 +119,5 @@ Feedstock Maintainers
 =====================
 
 * [@CJ-Wright](https://github.com/CJ-Wright/)
+* [@conda-forge/event-model](https://github.com/conda-forge/event-model/)
 
