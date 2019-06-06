@@ -1,6 +1,6 @@
 {% set name = "databroker" %}
-{% set version = "0.12.2" %}
-{% set sha256 = "e1673ffe884c8b627e495ef584cb7a3bdc3151fc9af534902c71d3fb32149b79" %}
+{% set version = "0.13.0" %}
+{% set sha256 = "2291b14d810b837d9bc2e229040f7a977dee9ece2d0073e72263bfc6a8599593" %}
 
 package:
   name: {{ name|lower }}
