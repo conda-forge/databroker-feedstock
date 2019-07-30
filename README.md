@@ -117,4 +117,5 @@ Feedstock Maintainers
 =====================
 
 * [@CJ-Wright](https://github.com/CJ-Wright/)
+* [@conda-forge/event-model](https://github.com/conda-forge/event-model/)
 
