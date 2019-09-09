@@ -62,5 +62,4 @@ about:
 
 extra:
   recipe-maintainers:
-    - CJ-Wright
     - conda-forge/event-model
