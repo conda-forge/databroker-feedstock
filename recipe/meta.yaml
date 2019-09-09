@@ -1,23 +1,22 @@
 {% set name = "databroker" %}
 {% set version = "0.13.3" %}
-{% set sha256 = "e83b245f783c631bfb693b214a4dc3c758c712a87359e515c0bbe58e2da98bc1" %}
+{% set sha256 = "53c13a7843afeaf34ac9913330afaaaee30f13f869b652e04615772e090c039a" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/NSLS-II/{{ name }}/archive/v{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
   noarch: python
-  number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 1
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
-  build:
+  host:
     - python
     - pip
   run:
@@ -25,14 +24,16 @@ requirements:
     - boltons
     - cytoolz
     - doct
+    - glueviz
     - h5py
     - humanize
-    - jsonschema
     - jinja2
+    - jsonschema
     - mongoquery
     - numpy
     - pandas
     - pims
+    - pymongo
     - python
     - pytz
     - pyyaml
@@ -50,15 +51,14 @@ test:
     - databroker.broker
 
 about:
-  home: https://github.com/NSLS-II/databroker
+  home: http://blueskyproject.io
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
   summary: 'A unified interface to the various data sources at NSLS-II.'
-
   description: 'A unified interface to the various data sources at NSLS-II.'
-  doc_url: http://nsls-ii.github.io/databroker/
-  dev_url: https://github.com/NSLS-II/databroker/
+  doc_url: http://blueskyproject.io/databroker
+  dev_url: https://github.com/bluesky/databroker
 
 extra:
   recipe-maintainers:
