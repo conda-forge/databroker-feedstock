@@ -1,6 +1,6 @@
 {% set name = "databroker" %}
-{% set version = "0.13.3" %}
-{% set sha256 = "e83b245f783c631bfb693b214a4dc3c758c712a87359e515c0bbe58e2da98bc1" %}
+{% set version = "1.0.2" %}
+{% set sha256 = "bbfbeaa4e5627e3b7cc547853c24f83b1d967dbd2d65aadb414f233cf48682e7" %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +14,7 @@ source:
 build:
   noarch: python
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
@@ -54,9 +54,9 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'A unified interface to the various data sources at NSLS-II.'
+  summary: A unified interface to the various data sources at NSLS-II.
 
-  description: 'A unified interface to the various data sources at NSLS-II.'
+  description: A unified interface to the various data sources at NSLS-II.
   doc_url: http://nsls-ii.github.io/databroker/
   dev_url: https://github.com/NSLS-II/databroker/
 
