@@ -1,67 +1,80 @@
 {% set name = "databroker" %}
 {% set version = "1.0.3" %}
-{% set sha256 = "a2cad5c81f1abe7200547df9a44696c92052214651cc1e242da5daca395a8d15" %}
+{% set sha256 = "557af0f957c6d4c35a41a2e3a5dbb824302329d9d3c771d0f04772cf2bae615c" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/NSLS-II/{{ name }}/archive/v{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
   noarch: python
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
-  build:
+  host:
     - python
     - pip
   run:
-    - attrs >=16.3.0
+    - python
     - boltons
-    - cytoolz
+    - cachetools
+    - dask
     - doct
-    - h5py
+    - event-model >=1.14.0
     - humanize
-    - intake
-    - jsonschema
+    - intake >=0.5.5
     - jinja2
+    - jsonschema
     - mongoquery
+    - msgpack-numpy
+    - msgpack-python
     - numpy
     - pandas
     - pims
-    - python
+    - pymongo
     - pytz
     - pyyaml
     - requests
     - six
-    - tifffile
-    - tornado
+    - suitcase-mongo
+    - suitcase-msgpack
+    - tifffile !=2019.7.26.2
+    - toolz
     - tzlocal
-    - ujson
+    - xarray
+    - zarr
 
 test:
   imports:
     - databroker
-    - databroker.core
-    - databroker.broker
+    - databroker._drivers
+    - databroker.assets
+    - databroker.assets.readers
+    - databroker.assets.tests
+    - databroker.eventsource
+    - databroker.eventsource.tests
+    - databroker.headersource
+    - databroker.service
+    - databroker.tests
+    - databroker.tests.test_v2
+  commands:
+    - intake drivers list 2>&1 | grep bluesky  # [not win]
 
 about:
-  home: https://github.com/NSLS-II/databroker
+  home: http://blueskyproject.io
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: A unified interface to the various data sources at NSLS-II.
-
-  description: A unified interface to the various data sources at NSLS-II.
-  doc_url: http://nsls-ii.github.io/databroker/
-  dev_url: https://github.com/NSLS-II/databroker/
+  summary: 'A unified interface to the various data sources at NSLS-II.'
+  description: 'A unified interface to the various data sources at NSLS-II.'
+  doc_url: http://blueskyproject.io/databroker
+  dev_url: https://github.com/bluesky/databroker
 
 extra:
   recipe-maintainers:
-    - CJ-Wright
     - conda-forge/event-model
