@@ -27,6 +27,7 @@ requirements:
     - doct
     - h5py
     - humanize
+    - intake
     - jsonschema
     - jinja2
     - mongoquery
