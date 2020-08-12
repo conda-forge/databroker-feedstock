@@ -1,6 +1,6 @@
 {% set name = "databroker" %}
-{% set version = "1.0.3" %}
-{% set sha256 = "557af0f957c6d4c35a41a2e3a5dbb824302329d9d3c771d0f04772cf2bae615c" %}
+{% set version = "1.0.6" %}
+{% set sha256 = "39f4e12625c42d54f3fc218ffd9640490f4a5d2455289d37ae7886f6b7974851" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -70,8 +70,8 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'A unified interface to the various data sources at NSLS-II.'
-  description: 'A unified interface to the various data sources at NSLS-II.'
+  summary: A unified interface to the various data sources at NSLS-II.
+  description: A unified interface to the various data sources at NSLS-II.
   doc_url: http://blueskyproject.io/databroker
   dev_url: https://github.com/bluesky/databroker
 
