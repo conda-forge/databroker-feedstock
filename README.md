@@ -118,6 +118,3 @@ Feedstock Maintainers
 
 * [@conda-forge/event-model](https://github.com/conda-forge/event-model/)
 
-
-<!-- dummy commit to enable rerendering -->
-
