@@ -12,7 +12,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -21,6 +21,7 @@ requirements:
     - pip
   run:
     - python
+    - bluesky-live
     - boltons
     - cachetools
     - dask
@@ -64,6 +65,9 @@ test:
     - databroker.tests.test_v2
   commands:
     - intake drivers list 2>&1 | grep bluesky  # [not win]
+    - pip check
+  requires:
+    - pip
 
 about:
   home: http://blueskyproject.io
