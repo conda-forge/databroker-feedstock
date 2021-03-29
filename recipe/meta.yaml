@@ -1,6 +1,6 @@
 {% set name = "databroker" %}
-{% set version = "1.2.2" %}
-{% set sha256 = "29b3cf700df4437977b4920d459302946d2956d79512cfa7b1fe736318254c80" %}
+{% set version = "1.2.3" %}
+{% set sha256 = "0120fd3d9737752e396fa571d644f786d0068d8919df4ad783c63e73aa9e2418" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
