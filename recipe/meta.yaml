@@ -28,7 +28,7 @@ requirements:
     - doct
     - event-model >=1.14.0
     - humanize
-    - intake >=0.5.5
+    - intake >=0.5.5,<=0.6.4
     - jinja2
     - jsonschema
     - mongoquery
