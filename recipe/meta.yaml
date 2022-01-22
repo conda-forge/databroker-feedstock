@@ -64,7 +64,7 @@ test:
     - databroker.tests
     - databroker.tests.test_v2
   commands:
-    - intake drivers list 2>&1 | grep bluesky  # [not win]
+    - intake drivers list
     - pip check
   requires:
     - pip
