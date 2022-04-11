@@ -90,3 +90,5 @@ about:
 extra:
   recipe-maintainers:
     - conda-forge/event-model
+    - mrakitin
+    - gwbischof
