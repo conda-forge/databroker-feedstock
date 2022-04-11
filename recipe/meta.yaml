@@ -36,7 +36,6 @@ requirements:
     - jsonschema
     - mongomock
     - mongoquery
-    - msgpack
     - msgpack-numpy
     - msgpack-python
     - numpy
