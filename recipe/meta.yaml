@@ -51,7 +51,10 @@ requirements:
     - suitcase-mongo
     - suitcase-msgpack
     - tifffile !=2019.7.26.2
-    - tiled >=0.1.0a60
+    # TODO: uncomment once
+    # https://github.com/conda-forge/staged-recipes/pull/18601 is merged and
+    # all the tiled* packages are on conda-forge (uploaded and indexed):
+    # - tiled >=0.1.0a60
     - toolz
     - tzlocal
     - xarray
