@@ -1,6 +1,6 @@
 {% set name = "databroker" %}
-{% set version = "1.2.5" %}
-{% set sha256 = "9950db880c3bf7350b7f0db03c02a83eec1afb8529247ffbcf098dfa078412e0" %}
+{% set version = "2.0.0b2" %}
+{% set sha256 = "17fc6191bfb1a253c4595ccadf014a2f3d97e394348ea4a4d146adde4aeeeb94" %}
 
 package:
   name: {{ name|lower }}
@@ -21,30 +21,40 @@ requirements:
     - pip
   run:
     - python >=3.6
+    - area-detector-handlers
     - bluesky-live >=0.0.6
     - boltons
     - cachetools
     - dask
     - doct
+    - entrypoints
     - event-model >=1.14.0
+    - fastapi
     - humanize
     - intake >=0.5.5,<=0.6.4
     - jinja2
     - jsonschema
+    - mongomock
     - mongoquery
     - msgpack-numpy
     - msgpack-python
     - numpy
     - pandas
     - pims
+    - pydantic
     - pymongo
     - pytz
     - pyyaml
     - requests
     - six
+    - starlette
     - suitcase-mongo
     - suitcase-msgpack
     - tifffile !=2019.7.26.2
+    # TODO: uncomment once
+    # https://github.com/conda-forge/staged-recipes/pull/18601 is merged and
+    # all the tiled* packages are on conda-forge (uploaded and indexed):
+    # - tiled >=0.1.0a60
     - toolz
     - tzlocal
     - xarray
@@ -52,22 +62,14 @@ requirements:
 
 test:
   imports:
-    - databroker
-    - databroker._drivers
-    - databroker.assets
-    - databroker.assets.readers
-    - databroker.assets.tests
-    - databroker.eventsource
-    - databroker.eventsource.tests
-    - databroker.headersource
-    - databroker.service
-    - databroker.tests
-    - databroker.tests.test_v2
-  commands:
-    # - intake drivers list
-    - pip check
-  requires:
-    - pip
+    # NOTE: it's a fake test to have a successful build. Uncomment once the
+    # tiled feedstock is created.
+    - os
+    # - databroker
+  # commands:
+  #   - pip check
+  # requires:
+  #   - pip
 
 about:
   home: http://blueskyproject.io
@@ -82,3 +84,5 @@ about:
 extra:
   recipe-maintainers:
     - conda-forge/event-model
+    - mrakitin
+    - gwbischof
