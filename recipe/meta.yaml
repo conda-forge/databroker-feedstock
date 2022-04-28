@@ -12,7 +12,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -22,43 +22,28 @@ requirements:
   run:
     - python >=3.6
     - area-detector-handlers
-    - bluesky-live >=0.0.6
     - boltons
     - cachetools
-    - dask
     - doct
     - entrypoints
-    - event-model >=1.14.0
+    - event-model
     - fastapi
     - humanize
-    - intake >=0.5.5,<=0.6.4
     - jinja2
-    - jsonschema
     - mongomock
     - mongoquery
-    - msgpack-numpy
-    - msgpack-python
-    - numpy
-    - pandas
+    - msgpack-python >=1.0.0
     - pims
     - pydantic
     - pymongo
     - pytz
-    - pyyaml
-    - requests
-    - six
     - starlette
-    - suitcase-mongo
-    - suitcase-msgpack
-    - tifffile !=2019.7.26.2
+    - toolz
+    - tzlocal
     # TODO: uncomment once
     # https://github.com/conda-forge/staged-recipes/pull/18601 is merged and
     # all the tiled* packages are on conda-forge (uploaded and indexed):
     # - tiled >=0.1.0a60
-    - toolz
-    - tzlocal
-    - xarray
-    - zarr
 
 test:
   imports:
