@@ -37,6 +37,7 @@ requirements:
     - pymongo
     - pytz
     - starlette
+    - tiled-client
     - toolz
     - tzlocal
     # TODO: uncomment once
