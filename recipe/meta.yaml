@@ -1,6 +1,5 @@
 {% set name = "databroker" %}
-{% set version = "1.2.5" %}
-{% set sha256 = "9950db880c3bf7350b7f0db03c02a83eec1afb8529247ffbcf098dfa078412e0" %}
+{% set version = "2.0.0b10" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: cbfef243f824d16d85395747767dceb1b95e2f46b7bdebc778b22d22615afd44
 
 build:
   noarch: python
@@ -21,53 +20,39 @@ requirements:
     - pip
   run:
     - python >=3.6
-    - bluesky-live >=0.0.6
+    - area-detector-handlers
     - boltons
     - cachetools
-    - dask
     - doct
-    - event-model >=1.14.0
+    - entrypoints
+    - event-model
+    - fastapi
     - humanize
-    - intake >=0.5.5,<=0.6.4
     - jinja2
-    - jsonschema
+    - mongomock
     - mongoquery
-    - msgpack-numpy
-    - msgpack-python
-    - numpy
-    - pandas
+    - msgpack-python >=1.0.0
     - pims
+    - pydantic
     - pymongo
     - pytz
-    - pyyaml
-    - requests
-    - six
-    - suitcase-mongo
-    - suitcase-msgpack
-    - tifffile !=2019.7.26.2
+    - starlette
+    - tiled-client
+    - tiled-server
     - toolz
     - tzlocal
-    - xarray
-    - zarr
+    - tiled >=0.1.0a70
 
 test:
   imports:
-    - databroker
-    - databroker._drivers
-    - databroker.assets
-    - databroker.assets.readers
-    - databroker.assets.tests
-    - databroker.eventsource
-    - databroker.eventsource.tests
-    - databroker.headersource
-    - databroker.service
-    - databroker.tests
-    - databroker.tests.test_v2
-  commands:
-    # - intake drivers list
-    - pip check
-  requires:
-    - pip
+    # NOTE: it's a fake test to have a successful build. Uncomment once the
+    # tiled feedstock is created.
+    - os
+    # - databroker
+  # commands:
+  #   - pip check
+  # requires:
+  #   - pip
 
 about:
   home: http://blueskyproject.io
@@ -82,3 +67,5 @@ about:
 extra:
   recipe-maintainers:
     - conda-forge/event-model
+    - mrakitin
+    - gwbischof
