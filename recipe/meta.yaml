@@ -1,5 +1,5 @@
 {% set name = "databroker" %}
-{% set version = "2.0.0b13" %}
+{% set version = "2.0.0b14" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7aa2af847010916c2250396beef013cf131a25e8a54d413ee38649e3c6d278d7
+  sha256: 54eb908dad39a2b1e3028930bbe87eaeb3080cb1c8ce2af1bbd478b0261dcfe1
 
 build:
   noarch: python
@@ -29,9 +29,11 @@ requirements:
     - fastapi
     - humanize
     - jinja2
+    - jsonschema
     - mongomock
     - mongoquery
     - msgpack-python >=1.0.0
+    - orjson
     - pims
     - pydantic
     - pymongo
