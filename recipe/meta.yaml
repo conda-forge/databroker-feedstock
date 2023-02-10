@@ -1,5 +1,5 @@
 {% set name = "databroker" %}
-{% set version = "2.0.0b14" %}
+{% set version = "2.0.0b15" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 54eb908dad39a2b1e3028930bbe87eaeb3080cb1c8ce2af1bbd478b0261dcfe1
+  sha256: e78ea2e5e8d05272d8ec4623cd85f02e7fae8ff2ab315bccdf17c458800d4993
 
 build:
   noarch: python
@@ -39,22 +39,19 @@ requirements:
     - pymongo
     - pytz
     - starlette
+    - tiled >=0.1.0a84
     - tiled-client
     - tiled-server
     - toolz
     - tzlocal
-    - tiled >=0.1.0a70
 
 test:
   imports:
-    # NOTE: it's a fake test to have a successful build. Uncomment once the
-    # tiled feedstock is created.
-    - os
-    # - databroker
-  # commands:
-  #   - pip check
-  # requires:
-  #   - pip
+    - databroker
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: http://blueskyproject.io
