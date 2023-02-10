@@ -5,7 +5,7 @@ Home: http://blueskyproject.io
 
 Package license: BSD-3-Clause
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/databroker-feedstock2-feedstock/blob/main/LICENSE.txt)
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/databroker-feedstock/blob/main/LICENSE.txt)
 
 Summary: A unified interface to the various data sources at NSLS-II.
 
@@ -21,8 +21,8 @@ Current build status
 
 <table><tr><td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/databroker-feedstock2-feedstock?branchName=main">
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5550&branchName=main">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/databroker-feedstock?branchName=main">
       </a>
     </td>
   </tr>
