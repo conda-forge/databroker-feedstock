@@ -1,11 +1,11 @@
-About databroker
-================
+About databroker-feedstock
+==========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/databroker-feedstock/blob/main/LICENSE.txt)
 
 Home: http://blueskyproject.io
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/databroker-feedstock/blob/main/LICENSE.txt)
 
 Summary: A unified interface to the various data sources at NSLS-II.
 
