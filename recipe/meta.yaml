@@ -39,7 +39,7 @@ requirements:
     - pymongo
     - pytz
     - starlette
-    - tiled >=0.1.0a91
+    - tiled >=0.1.0a106
     - tiled-client
     - tiled-server
     - toolz
