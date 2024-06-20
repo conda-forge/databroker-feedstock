@@ -1,5 +1,5 @@
 {% set name = "databroker" %}
-{% set version = "2.0.0b40" %}
+{% set version = "2.0.0b44" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 1aa8537f4fd610f57592e3d2806b65391e28db09acd272b2b157ad9f049238fd
+  sha256: 6db8c18eb136817447fc9a3a2f87b61b0e209d6f66b5f5527a6e3f526cbeed9a
 
 build:
   noarch: python
@@ -40,7 +40,7 @@ requirements:
     - pytz
     - starlette
     - suitcase-mongo >=0.6.0
-    - tiled >=0.1.0a119
+    - tiled >=0.1.0b4
     - tiled-client
     - tiled-server
     - toolz
