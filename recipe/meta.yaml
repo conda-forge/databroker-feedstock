@@ -50,7 +50,54 @@ requirements:
 test:
   imports:
     - databroker
+    - databroker.assets
+    - databroker.assets.base_registry
+    - databroker.assets.column_hdf5
+    - databroker.assets.core
+    - databroker.assets.file_writers
+    - databroker.assets.handlers
+    - databroker.assets.handlers_base
+    - databroker.assets.mongo
+    - databroker.assets.mongo_core
+    - databroker.assets.path_only_handlers
+    - databroker.assets.readers
+    - databroker.assets.readers.spe
+    - databroker.assets.sqlite
+    - databroker.assets.utils
+    - databroker.broker
+    - databroker.cli
     - databroker.client
+    - databroker.databroker
+    - databroker.document
+    - databroker.eventsource
+    - databroker.eventsource.archiver
+    - databroker.eventsource.shim
+    - databroker.glue
+    - databroker.headersource
+    - databroker.headersource.base
+    - databroker.headersource.core
+    - databroker.headersource.hdf5
+    - databroker.headersource.mongo
+    - databroker.headersource.mongo_core
+    - databroker.headersource.mongoquery
+    - databroker.headersource.shim
+    - databroker.headersource.sqlite
+    - databroker.in_memory
+    - databroker.mongo_normalized
+    - databroker.pims_readers
+    - databroker.pivot
+    - databroker.projector
+    - databroker.queries
+    - databroker.query_impl
+    - databroker.replay
+    - databroker.replay.replay_script
+    - databroker.server
+    - databroker.shape_fixer
+    - databroker.tutorial_utils
+    - databroker.utils
+    - databroker.v0
+    - databroker.v1
+    - databroker.v2
   commands:
     - pip check
   requires:
