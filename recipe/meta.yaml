@@ -50,6 +50,7 @@ requirements:
 test:
   imports:
     - databroker
+    - databroker.client
   commands:
     - pip check
   requires:
