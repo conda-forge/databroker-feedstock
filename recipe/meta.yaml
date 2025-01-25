@@ -23,6 +23,7 @@ requirements:
     - python >={{ python_min }}
     - area-detector-handlers
     - boltons
+    - bluesky-tiled-plugins
     - cachetools
     - doct
     - entrypoints
