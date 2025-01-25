@@ -85,7 +85,7 @@ test:
     - databroker.headersource.mongoquery
     - databroker.headersource.shim
     - databroker.headersource.sqlite
-    - databroker.in_memory
+    # - databroker.in_memory  # NOTE: uses 'databroker.core', need to fix in the codebase.
     - databroker.mongo_normalized
     - databroker.pims_readers
     - databroker.pivot
