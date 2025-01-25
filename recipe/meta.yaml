@@ -29,6 +29,7 @@ requirements:
     - entrypoints
     - event-model
     - fastapi
+    - glue-core
     - humanize
     - jinja2
     - jsonschema
