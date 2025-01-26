@@ -1,5 +1,5 @@
 {% set name = "databroker" %}
-{% set version = "2.0.0b52" %}
+{% set version = "2.0.0b55" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a6f29abf7e90af5894cfb300ca5c1e842ff057041fb0599f924216a470407e0c
+  sha256: 9987b21715fb8ebfa7a746177123b37d7833deb3c9d8c04e8eb04ed7dc8aee82
 
 build:
   noarch: python
@@ -23,11 +23,13 @@ requirements:
     - python >={{ python_min }}
     - area-detector-handlers
     - boltons
+    - bluesky-tiled-plugins
     - cachetools
     - doct
     - entrypoints
     - event-model
     - fastapi
+    - glue-core
     - humanize
     - jinja2
     - jsonschema
@@ -39,9 +41,10 @@ requirements:
     - pydantic
     - pymongo
     - pytz
+    - requests
     - starlette
     - suitcase-mongo >=0.6.0
-    - tiled >=0.1.0b13
+    - tiled >=0.1.0b16
     - tiled-client
     - tiled-server
     - toolz
@@ -50,6 +53,54 @@ requirements:
 test:
   imports:
     - databroker
+    - databroker.assets
+    - databroker.assets.base_registry
+    - databroker.assets.column_hdf5
+    - databroker.assets.core
+    - databroker.assets.file_writers
+    - databroker.assets.handlers
+    - databroker.assets.handlers_base
+    - databroker.assets.mongo
+    - databroker.assets.mongo_core
+    - databroker.assets.path_only_handlers
+    - databroker.assets.readers
+    - databroker.assets.readers.spe
+    - databroker.assets.sqlite
+    - databroker.assets.utils
+    - databroker.broker
+    - databroker.cli
+    - databroker.client
+    - databroker.databroker
+    - databroker.document
+    - databroker.eventsource
+    - databroker.eventsource.archiver
+    - databroker.eventsource.shim
+    - databroker.glue
+    - databroker.headersource
+    - databroker.headersource.base
+    - databroker.headersource.core
+    - databroker.headersource.hdf5
+    - databroker.headersource.mongo
+    - databroker.headersource.mongo_core
+    - databroker.headersource.mongoquery
+    - databroker.headersource.shim
+    - databroker.headersource.sqlite
+    # - databroker.in_memory  # NOTE: uses 'databroker.core', need to fix in the codebase.
+    - databroker.mongo_normalized
+    # - databroker.pims_readers  # NOTE: failure with importing 'databroker.databroker'.
+    - databroker.pivot
+    - databroker.projector
+    - databroker.queries
+    - databroker.query_impl
+    - databroker.replay
+    - databroker.replay.replay_script
+    - databroker.server
+    - databroker.shape_fixer
+    # - databroker.tutorial_utils  # NOTE: requires 'databroker_pack'.
+    - databroker.utils
+    - databroker.v0
+    - databroker.v1
+    - databroker.v2
   commands:
     - pip check
   requires:
