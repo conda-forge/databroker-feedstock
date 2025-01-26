@@ -96,7 +96,7 @@ test:
     - databroker.replay.replay_script
     - databroker.server
     - databroker.shape_fixer
-    - databroker.tutorial_utils
+    # - databroker.tutorial_utils  # NOTE: requires 'databroker_pack'.
     - databroker.utils
     - databroker.v0
     - databroker.v1
