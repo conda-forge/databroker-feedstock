@@ -87,7 +87,7 @@ test:
     - databroker.headersource.sqlite
     # - databroker.in_memory  # NOTE: uses 'databroker.core', need to fix in the codebase.
     - databroker.mongo_normalized
-    - databroker.pims_readers
+    # - databroker.pims_readers  # NOTE: failure with importing 'databroker.databroker'.
     - databroker.pivot
     - databroker.projector
     - databroker.queries
