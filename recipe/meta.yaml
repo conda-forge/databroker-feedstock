@@ -1,5 +1,5 @@
 {% set name = "databroker" %}
-{% set version = "2.0.0b62" %}
+{% set version = "2.0.0b64" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6c4e6619c874ebd5e80be92c07aef6f86394d7487cb491d9eed4c7331db5dcab
+  sha256: 10e11b9cb6b70416085d5480da2bf98b21cc0f0ea0f5a489bb1aaa459219602f
 
 build:
   noarch: python
